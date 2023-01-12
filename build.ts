@@ -13,7 +13,8 @@ const userscriptBanner = `// ==UserScript==
 // @id          ${pkg.name}
 // @name        ${pkg.name}
 // @namespace   Violentmonkey Scripts
-// @match       https://www.pandabuy.com/* https://pandabuy.com/*
+// @match       https://www.pandabuy.com/*
+// @match       https://pandabuy.com/*
 // @grant       none
 // @version     ${VERSION}
 // @author      ${pkg.author}
