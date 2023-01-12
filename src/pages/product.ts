@@ -1,10 +1,13 @@
 import { waitOnElem, waitOnElemOrTimeout } from '../utils/wait'
 import { imageToBlob } from '../utils/imageToBlob'
+import { setFavicon } from '../utils/favicon'
+import { PageType } from '../find-type'
 
 const changeTitleFeature = async () => {
     const prodTitle = await waitOnElem('.goods-title_text')
     const isFav = document.querySelector('#app').querySelectorAll('.favorite').length > 0
-    document.title = `${isFav ? '❤️ ' : ''}${prodTitle.textContent}`
+    setFavicon(isFav, PageType.PRODUCT)
+    document.title = `${prodTitle.textContent}`
 }
 
 const preloadImages = async () => {
@@ -34,6 +37,15 @@ const preloadImages = async () => {
     }
 }
 
+const hookTitleChange = async () => {
+    await waitOnElem('.favorite, .is-favorite')
+    document.querySelectorAll('.favorite, .is-favorite').forEach((button) => {
+        button.addEventListener('click', () => {
+            setTimeout(changeTitleFeature, 500)
+        })
+    })
+}
+
 export default async () => {
-    await Promise.any([changeTitleFeature(), preloadImages()])
+    await Promise.any([changeTitleFeature(), hookTitleChange(), preloadImages()])
 }
