@@ -7,7 +7,7 @@ const isProd = buildEnv === 'prod'
 const watch = !!process.env.WATCH_FILES
 const releaseTag = process.env.RELEASE_TAG || 'dev'
 
-const VERSION = `${pkg.version}${releaseTag}`
+const VERSION = `${pkg.version}`
 
 const userscriptBanner = `// ==UserScript==
 // @id          ${pkg.name}
