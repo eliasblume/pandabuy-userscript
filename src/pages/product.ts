@@ -16,7 +16,7 @@ const preloadImages = async () => {
 
         await new Promise((resolve) => setTimeout(resolve, 0))
         document.querySelector<HTMLImageElement>('img.timeInfo-img').click()
-        console.log('ss')
+
         const img = (await waitOnElem('img.swiper-big-img-item[data-src^="https"]')) as HTMLImageElement
 
         // // document.querySelectorAll<HTMLImageElement>('img.swiper-big-img-item').forEach((img, ix) => {
