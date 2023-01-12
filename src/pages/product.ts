@@ -18,7 +18,7 @@ const preloadImages = async () => {
         document.querySelector<HTMLImageElement>('img.timeInfo-img').click()
         console.log('ss')
         const img = (await waitOnElem('img.swiper-big-img-item[data-src^="https"]')) as HTMLImageElement
-        // console.log(img)
+
         // // document.querySelectorAll<HTMLImageElement>('img.swiper-big-img-item').forEach((img, ix) => {
         // //     if (ix < imagesToLoad) {
         // //         // img.loading = 'eager'
