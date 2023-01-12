@@ -9,5 +9,5 @@ userscript for pandabuy.com
 
 1. Make sure you have user scripts enabled in your browser (these instructions refer to the latest versions of the browser):
     [Violentmonkey](https://violentmonkey.github.io/get-it/)
-2. Install the userscript by clicking [here]()
+
 3. that's it !!!
