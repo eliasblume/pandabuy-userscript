@@ -30,5 +30,6 @@ const hookTitleChange = async () => {
 }
 
 export default async () => {
+    console.log('shop page - pandabuy-script')
     await Promise.any([remarksToTitle(), hookTitleChange()])
 }

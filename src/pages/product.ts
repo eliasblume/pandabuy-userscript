@@ -31,6 +31,7 @@ const preloadImages = async () => {
         // //         })
         // //     }
         // // })
+
         ;(await waitOnElem('#storageqcimg-dialog-close')).click()
         await new Promise((resolve) => setTimeout(resolve, 2000))
         box.setAttribute('style', 'z-index: 2001; display: none;')
@@ -47,5 +48,6 @@ const hookTitleChange = async () => {
 }
 
 export default async () => {
+    console.log('product page - pandabuy-script')
     await Promise.any([changeTitleFeature(), hookTitleChange(), preloadImages()])
 }
