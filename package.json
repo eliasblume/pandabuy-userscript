@@ -1,0 +1,24 @@
+{
+  "name": "pandabuy-userscript",
+  "version": "1.0.0",
+  "description": "pandabuy userscript",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "export WATCH_FILES=true && tsx build",
+    "build": "tsx build.ts"
+  },
+  "keywords": ["pandabuy", "userscript"],
+  "packageManager": "pnpm@7.13.4",
+  "author": "Elias Blume",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eliasblume/pandabuy-userscript"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.11.13",
+    "esbuild": "^0.16.4",
+    "tsx": "^3.12.1",
+    "typescript": "^4.9.4"
+  }
+}
